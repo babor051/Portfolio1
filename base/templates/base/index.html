@@ -1,0 +1,160 @@
+{% extends 'base/main.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>
+    {% block title %} 
+    Profile
+    {% endblock %}
+</title>
+ </head>
+
+<body>
+    {% block content %}
+    <section class="s1">
+        <div class="main-container">
+            <div class="greeting_wrapper">
+                <h1>Hi, I am Babor Islam</h1>
+            </div>
+
+            <div class="intro-wrapper">
+                <div class="left-column">
+                    <img id="profile-pic" src="{% static 'images/babor.jpg' %}">
+                    <h5 class="my-2" style="text-align: center;line-height: 0;">Personalize Theme</h5>
+                    <div id="theme-options-wrapper">
+                        <div data-mode="light" id="light-mode" class="theme-dot"></div>
+                        <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+                        <div data-mode="green" id="green-mode" class="theme-dot"></div>
+                        <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+                    </div>
+                    <p id="settings-note">*Theme settings will be saved for<br>your next visit</p>
+                </div>
+
+                <div class="right-column">
+                    <div id="preview-shadow">
+                        <div id="preview">
+                            <div id="corner-tl" class="corner"></div>
+                            <div id="corner-tr" class="corner"></div>
+                            <h3>What I Do..</h3>
+                            <p>I am a full stack  web developer</p>
+                            <div id="corner-bl" class="corner"></div>
+                            <div id="corner-br" class="corner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </section>
+    <section class="s2">
+        <div class="main-container">
+            <div class="about-wrapper">
+                <div class="about-me">
+                    <h4>More about me</h4>
+                    <p>I am a full stack web developer. I just buil new projects to tickle my brain. Also have interest in AI</p>
+
+                    <p>I deal with clients in an efficient way. I keep my manner cool and calm. Very obvious to my duties and punctual to clients.</p>
+
+                    <hr>
+
+                    <h4>Top Expertise</h4>
+                    <p>Full stack web developer with primary focus on Django. <a target="_blank" href="#">Download Resume</a></p>
+                    <div id="skills">
+                        <ul>
+                            <li>Python</li>
+                            <li>Django</li>
+                            <li>PostgreSQL</li>
+                            <li>MySQL</li>
+                        </ul>
+                        <ul>
+                            <li>HTML, CSS</li>
+                            <li>jQuery</li>
+                            <li>Boostrap</li>
+                            <li>C</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="social-links">
+                    <img id="social-img" src="{% static 'images/linkedin-me.jpg' %}">
+                    <h4>Find me on Facebook, Linkedin & Youtube</h4>
+
+                    <a target="_blank" href="https://www.facebook.com/babor.islam.95">Facebook: @Babor_Islam</a><br>
+                    <a target="_blank" href="https://www.linkedin.com/in/babor-islam-ba8454193/">Linkedin: @Babor_Islam</a><br>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCJHhjtFKTqfaSERFO3Q21yQ?">Youtube: @Learning_Studio</a>
+
+                </div>
+            </div>        
+        </div>
+    </section>
+    <section class="s3">
+        <div class="main-container">
+            <h3 style="text-align: center;">Some of my past projects</h3>
+
+            <div class="post-wrapper">
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="{% static 'images/pp2.jpg' %}">
+                        <div class="post-preview">
+                            <h6 class="post-title">Post Title</h6>
+                            <p class="post-intro">This is a sentence</p>
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="{% static 'images/pp1.jpg' %}">
+                        <div class="post-preview">
+                            <h6 class="post-title">Post Title</h6>
+                            <p class="post-intro">This is a sentence</p>
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="{% static 'images/pp3.jpg' %}">
+                        <div class="post-preview">
+                            <h6 class="post-title">Post Title</h6>
+                            <p class="post-intro">This is a sentence</p>
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <p align="center">
+                <a href="{% url 'posts' %}">View more</a>
+            </p>
+
+        </div>
+    </section>
+    <section class="s4">
+        <div class="main-container">
+            <h3 style="text-align: center;">Get in touch</h3>
+
+            <form id="contact-form">
+                <label>Name</label>
+                <input class="input-field" type="text" name="name">
+
+                <label>Subject</label>
+                <input class="input-field" type="text" name="subject">
+
+                <label>Email</label>
+                <input class="input-field" type="text" name="email">
+
+                <label>Message</label>
+                <textarea class="input-field" name="message"></textarea>                
+
+                <input id="submit-btn" type="submit" value="Send">
+            </form>
+         </div>
+    </section>
+
+    {% endblock %}
+

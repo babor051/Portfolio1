@@ -1,0 +1,19 @@
+{% extends 'base/main.html' %}
+{% load static %}
+<title>
+    {% block title %}
+    Post
+    {% endblock %}
+</title>
+
+{% block content %}
+
+<div class="container">
+    <a class="text-light my-3" href="{% url 'home' %}"><h5 class="text-primary">Go to Home</h5></a>
+
+    <h2>Post Title</h2>
+    <img style="width: 200px; height: 200px" src="{% static 'images/babor.jpg' %}" alt="">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate omnis nostrum, ut quam fuga hic tenetur voluptate odio fugiat magnam iure voluptatum accusantium nulla quasi vero ipsam dignissimos laboriosam velit vitae eius? Pariatur et cupiditate enim nostrum facere voluptate vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit unde iste recusandae itaque, repellat ullam error ex nulla porro. Tenetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor aliquid ex similique a nulla, velit suscipit atque quisquam aspernatur.</p>
+</div>
+
+{% endblock content %}
